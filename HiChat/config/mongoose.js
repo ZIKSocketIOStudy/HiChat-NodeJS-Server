@@ -26,7 +26,7 @@ var mongoose = require('mongoose'); //引入mongoose模块
 
 var URL = 'mongodb://127.0.0.1:27017/chat';
 
-var db = mongoose.connect(URL,function(err){
+var db = mongoose.connect(URL,{useNewUrlParser:true},function(err){
     if(err){
         console.warn('数据库连接失败：'+err);
     }else {
